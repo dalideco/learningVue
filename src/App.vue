@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <h1>this is dali deco</h1>
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
@@ -23,5 +23,10 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
 }
 </style>
