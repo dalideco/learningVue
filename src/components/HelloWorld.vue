@@ -27,7 +27,6 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .msg{
-    
     transition: opacity 300ms ease-in-out,transform 300ms ease-in-out;
   }
   .hello{
