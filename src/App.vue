@@ -1,16 +1,20 @@
 <template>
   <h1>this is dali deco</h1>
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
+  <ToDoList/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import ToDoList from './pages/ToDoList.vue';
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    ToDoList
   }
 });
 </script>
