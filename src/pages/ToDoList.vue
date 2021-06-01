@@ -8,7 +8,7 @@
   <button v-on:click="refresh()">refresh</button>
 
   <div v-for="todo in todos" :key="todo.id">
-    <ToDo :node="todo.node" :checked="todo.checked" :id="todo.id" @modify="modify" />
+    <ToDo :node="todo.node" :checked="todo.checked" :id="todo.id" :modify="modify" />
   </div>
 </template>
 
@@ -17,11 +17,11 @@ import Vue, { defineComponent } from "vue";
 import ToDo from "../components/ToDo.vue";
 
 interface dataI {
-  text: String;
+  text: string;
   todos: {
-     id: Number,
-     node: String,
-     checked: Boolean
+     id: number,
+     node: string,
+     checked: boolean
    }[],
   nbr: number
 }
@@ -53,7 +53,7 @@ export default defineComponent({
     refresh():void {
       this.todos = this.todos.filter((todo) => !todo.checked);
     },
-    modify(id:Number):void{
+    modify(id:number):void{
       this.todos= this.todos.map(todo=>{
         return (todo.id ===id)? {...todo, checked: !todo.checked}: todo;
       });
