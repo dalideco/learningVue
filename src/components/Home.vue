@@ -1,7 +1,9 @@
 <template>
+<div class="page" >
   <div>this is the home page</div>
   <p class="my-para">this is a message : {{msg}} </p>
   <button v-on:click="changeColor">change color</button>
+</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +15,7 @@ export default defineComponent({
         msg:String
     },
     methods:{
-        changeColor(event:any){
+        changeColor(event:any):void{
             event.target.style.background='red'
             const myPara:any = document.querySelector(".my-para");
             myPara.style.background="green";
@@ -23,7 +25,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-    .my-para{
-        color: blue;
+    .page{
+        background:blue;
     }
 </style>
