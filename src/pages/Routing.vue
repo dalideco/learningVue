@@ -1,20 +1,34 @@
 <template>
   <nav>
-      <h1>hello this is dali</h1>
+      <h1 v-show="homePage()">hello this is dali</h1>
       <router-link to="/">Home</router-link>
       <router-link to="/about">about</router-link>
       <!-- <router-link href="/other">other</router-link> -->
       
   </nav>
   <div class="page">
-  <router-view></router-view>
+  <router-view :msg="msg"></router-view>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
 
+interface dataProps{
+  msg:string
 }
+
+export default defineComponent({
+  name:"Routing",
+  data():dataProps{return{
+    msg:"hello this is dali"
+  }},
+  methods:{
+    homePage():boolean{
+      return this.$route.path==="/"
+    }
+  }
+})
 </script>
 
 <style scoped>

@@ -1,5 +1,4 @@
 <template>
-  <h1>this is dali deco</h1>
   <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
   <!-- <ToDoList/> -->
   <Routing/>
