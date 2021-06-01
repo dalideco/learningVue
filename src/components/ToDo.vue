@@ -1,21 +1,19 @@
 <template>
-    <input type="checkbox" name="check" id="" :checked="checked" v-on:click="modify">
+    <input type="checkbox" name="check"  :checked="checked" v-on:click="$emit('modify',id)" >
     <span>{{node}}</span>
 </template>
 
-<script>
-import { defineComponent } from "@vue/runtime-core";
+<script lang="ts">
+import Vue,{ defineComponent } from "@vue/runtime-core";
 
 export default defineComponent({
+    name:"ToDo",
     props:{
         node:String, 
-        checked: Boolean
+        checked: Boolean,
+        id:Number
     },
-    methods:{
-        modify(event){
-            console.log(event.target.checked)
-        }
-    }
+    
 })
 </script>
 
